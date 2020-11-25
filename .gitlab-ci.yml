@@ -1,0 +1,40 @@
+# Official framework image. Look for the different tagged releases at:
+# https://hub.docker.com/r/library/node/tags/
+image: node:lts
+
+before_script:
+  - npm install
+
+# This folder is cached between builds
+# http://docs.gitlab.com/ce/ci/yaml/README.html#cache
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  tags:
+    - docker
+  script:
+    - npm install
+    - npm run build
+  artifacts:
+    expire_in: 1 hour
+    paths:
+      - build
+
+deploy:
+  image: python:latest
+  stage: deploy
+  dependencies:
+    - build
+  before_script:
+    - pip install awscli
+  tags:
+    - docker
+  script:
+    - aws s3 cp build s3://winterparty2020.dev --recursive
