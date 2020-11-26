@@ -1,24 +1,44 @@
 import './App.css';
-import {VideoPlayer} from './components/atoms/VideoPlayer/VideoPlayer'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import VideoPage from './components/molecules/VideoPage/VideoPage'
+import Home from './Home'
 
-function App() {
+const App = () =>{
   return (
-    <div className="App">
-      <header className="App-header">
-        <VideoPlayer videoID="wrTzpakmJTE?start=1813" />
-        <p>
-          Hello World!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+    <div>
+      {/* <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/snøhetta">Snøhetta</Link>
+          </li>
+          <li>
+            <Link to="/glittertind">Glittertind</Link>
+          </li>
+        </ul>
+      </nav> */}
+      
+      <Switch>
+        <Route path="/snøhetta">
+          <VideoPage videoID="wrTzpakmJTE?start=1813"/>
+        </Route>
+        <Route path="/glittertind">
+        <VideoPage videoID="rXqAU2v_5Io"/>
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
     </div>
+  </Router>
   );
 }
 
