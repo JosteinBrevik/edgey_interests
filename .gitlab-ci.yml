@@ -37,4 +37,5 @@ deploy:
   tags:
     - docker
   script:
-    - aws s3 cp build s3://dev.oslowinterparty2020.edge-labs.com --recursive
+    - aws s3 cp build s3://${BUCKET_NAME_DEV} --recursive
+    - aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION_ID} --paths "/*"
