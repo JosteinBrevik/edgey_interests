@@ -30,6 +30,8 @@ build:
 deploy:
   image: python:latest
   stage: deploy
+  only:
+   - dev
   dependencies:
     - build
   before_script:
