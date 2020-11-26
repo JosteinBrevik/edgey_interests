@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import {VideoPlayer} from './components/atoms/VideoPlayer/VideoPlayer'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <VideoPlayer videoID="wrTzpakmJTE?start=1813" />
         <p>
           Hello World!
         </p>
