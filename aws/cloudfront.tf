@@ -3,7 +3,7 @@ resource "aws_cloudfront_origin_access_identity" "origin_access_identity" {}
 resource "aws_cloudfront_distribution" "dev_distribution" {
   origin {
     domain_name = aws_s3_bucket.winterparty2020_bucket_dev.bucket_regional_domain_name
-    origin_id = "S3-${aws_s3_bucket.winterparty2020_bucket_dev.bucket}"
+    origin_id = aws_s3_bucket.winterparty2020_bucket_dev.id
     s3_origin_config {
       origin_access_identity = aws_cloudfront_origin_access_identity.origin_access_identity.cloudfront_access_identity_path
     }
@@ -26,7 +26,7 @@ resource "aws_cloudfront_distribution" "dev_distribution" {
   default_cache_behavior {
     allowed_methods = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
     cached_methods = ["GET", "HEAD"]
-    target_origin_id = "S3-${aws_s3_bucket.winterparty2020_bucket_dev.bucket}"
+    target_origin_id = aws_s3_bucket.winterparty2020_bucket_dev.id
     
     # Forward all query strings, cookies and headers
     forwarded_values {
