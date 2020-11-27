@@ -1,4 +1,4 @@
-// import "./Home.css"
+import "./Home.css"
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -258,7 +258,7 @@ const Home = () => {
         strokeLinecap="butt"
         strokeWidth="12.64"
       />
-      <Link to="/glittertind">
+      <Link to="/snøhetta">
         <path
           d="M683.342 480.971l216.015-22.709 63.585-114.774-16.972-143.33-191.707-2.105-108.054 124"
           fill="url(#c)"
@@ -281,6 +281,7 @@ const Home = () => {
         strokeLinecap="butt"
         strokeWidth="12.64"
       />
+      <Link to="/falketind">
       <path
         d="M1677.3 701.739l262.69-2.616.83 136.035-263.01 4.179"
         fill="url(#f)"
@@ -288,6 +289,7 @@ const Home = () => {
         strokeLinecap="butt"
         strokeWidth="12.64"
       />
+      </Link>
       <path
         d="M1046.16 602.32l66.28 394.615 459.37-17.437-4.38-402.57-521.27 25.392z"
         fill="#fffefe"

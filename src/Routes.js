@@ -9,7 +9,7 @@ const Routes = () => {
         <Route path="/snøhetta">
           <VideoPage videoID="wrTzpakmJTE?start=1813" />
         </Route>
-        <Route path="/glittertind">
+        <Route path="/falketind">
           <VideoPage videoID="rXqAU2v_5Io" />
         </Route>
         <Route path="/">
