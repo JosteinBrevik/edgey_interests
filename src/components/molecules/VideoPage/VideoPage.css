@@ -10,4 +10,10 @@
     font-size: calc(10px + 2vmin);
     color: white;
   }
+
+  .video-back-button{
+    width: 100%;
+    flex-direction: row;
+    left: 0;
+  }
   

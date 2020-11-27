@@ -1,0 +1,17 @@
+.BackButton{
+    display: inline-block;
+    border: none;
+    margin-left: 2rem;
+    margin-top: 3rem;
+    text-decoration: none;
+    background: none;
+    font-family: sans-serif;
+    cursor: pointer;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+img {
+    width: 4vw;
+}
