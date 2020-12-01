@@ -1,4 +1,4 @@
-import React, { useState, useRef, cloneElement } from "react";
+import React, { useState, useRef } from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
@@ -27,10 +27,9 @@ const Home = () => {
 
   return (
     <TransformWrapper
-      step={100}
-      wheel={{ step: 100 }}
-      zoomin={{ animation: false }}
-      zoomout={{ animation: false }}
+      wheel={{ step: 30 }}
+      zoomIn={{ animation: false }}
+      zoomOut={{ animation: false }}
     >
       <TransformComponent>
         <div
