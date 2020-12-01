@@ -28,9 +28,9 @@ build:
     paths:
       - build
 
-deploy_prod:
+deploy_dev:
   image: python:latest
-  stage: deploy
+  stage: deploy_dev
   only:
    - master
   dependencies:
@@ -43,9 +43,9 @@ deploy_prod:
     - aws s3 cp build s3://${BUCKET_NAME_DEV} --recursive
     - aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION_ID_DEV} --paths "/*"
 
-    deploy_dev:
+    deploy_prod:
   image: python:latest
-  stage: deploy
+  stage: deploy_prod
   only:
    - dev
   dependencies:
