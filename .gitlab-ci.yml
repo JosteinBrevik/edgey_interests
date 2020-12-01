@@ -13,7 +13,8 @@ cache:
 
 stages:
   - build
-  - deploy
+  - deploy_dev
+  - deploy_prod
 
 build:
   stage: build
@@ -27,7 +28,22 @@ build:
     paths:
       - build
 
-deploy:
+deploy_prod:
+  image: python:latest
+  stage: deploy
+  only:
+   - master
+  dependencies:
+    - build
+  before_script:
+    - pip install awscli
+  tags:
+    - docker
+  script:
+    - aws s3 cp build s3://${BUCKET_NAME_DEV} --recursive
+    - aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION_ID_DEV} --paths "/*"
+
+    deploy_dev:
   image: python:latest
   stage: deploy
   only:
@@ -39,5 +55,5 @@ deploy:
   tags:
     - docker
   script:
-    - aws s3 cp build s3://${BUCKET_NAME_DEV} --recursive
-    - aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION_ID_DEV} --paths "/*"
+    - aws s3 cp build s3://${BUCKET_NAME_PROD} --recursive
+    - aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION_ID_PROD} --paths "/*"
