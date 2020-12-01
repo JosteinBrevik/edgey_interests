@@ -32,7 +32,7 @@ deploy_dev:
   image: python:latest
   stage: deploy_dev
   only:
-   - master
+   - dev
   dependencies:
     - build
   before_script:
@@ -47,7 +47,7 @@ deploy_prod:
   image: python:latest
   stage: deploy_prod
   only:
-   - dev
+   - master
   dependencies:
     - build
   before_script:
