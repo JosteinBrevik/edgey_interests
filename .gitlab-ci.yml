@@ -43,7 +43,7 @@ deploy_dev:
     - aws s3 cp build s3://${BUCKET_NAME_DEV} --recursive
     - aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION_ID_DEV} --paths "/*"
 
-    deploy_prod:
+deploy_prod:
   image: python:latest
   stage: deploy_prod
   only:
