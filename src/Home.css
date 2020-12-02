@@ -25,7 +25,7 @@ div {
 }
 
 #office.unvisited:hover{
-  fill: peru;
+  fill: rgb(252, 227, 86);
 }
 
 #office:hover{
