@@ -24,13 +24,20 @@ div {
   opacity: 0;
 }
 
+#office.unvisited:hover{
+  fill: peru;
+}
+
+#office:hover{
+  fill: white;
+}
 
 #content.fadein{
-  -webkit-animation: fadein 2s ease-in; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 2s ease-in; /* Firefox < 16 */
-  -ms-animation: fadein 2s ease-in; /* Internet Explorer */
-  -o-animation: fadein 2s ease-in; /* Opera < 12.1 */
-  animation: fadein 2s ease-in;
+  -webkit-animation: fadein 1.5s ease-in; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 1.5s ease-in; /* Firefox < 16 */
+  -ms-animation: fadein 1.5s ease-in; /* Internet Explorer */
+  -o-animation: fadein 1.5s ease-in; /* Opera < 12.1 */
+  animation: fadein 1.5s ease-in;
 }
 
 @keyframes fadein {

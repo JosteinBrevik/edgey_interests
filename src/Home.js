@@ -31,6 +31,7 @@ const Home = () => {
     setVisited(true)
     document.getElementById("content").classList.add('fadein')
     document.getElementById("content").classList.remove('initial')
+    document.getElementById("office").classList.remove('unvisited')
   }
   
 
@@ -40,6 +41,7 @@ const Home = () => {
       wheel={{ step: 30 }}
       zoomIn={{ animation: false }}
       zoomOut={{ animation: false }}
+      options={{limitToBounds: false}}
     >
       {({ setTransform, ...rest }) => (
         <React.Fragment>
@@ -341,14 +343,15 @@ const Home = () => {
                 </Link>
                 <path
                   id="office"
+                  className="unvisited"
                   d="M1046.16 602.32l66.28 394.615 459.37-17.437-4.38-402.57-521.27 25.392z"
                   fill="#fffefe"
                   stroke="#000"
                   strokeLinecap="butt"
                   strokeWidth="12.64"
-                  style={hover && !visited ? {fill: "peru"} : {}}
-                  onMouseEnter={()=>setHover(true)}
-                  onMouseLeave={()=>setHover(false)}
+                  // style={hover && !visited ? {fill: "peru"} : undefined}
+                  // onMouseEnter={()=>setHover(true)}
+                  // onMouseLeave={()=>setHover(false)}
                   onMouseDown={()=>handleVisited()}
                   onClick={()=>{
                     setTransform(-window.innerWidth, -window.innerHeight, 3, 1500, "easeOut")
