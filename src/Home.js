@@ -5,8 +5,6 @@ import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
 const Home = () => {
   const [mouseDown, setMouseDown] = useState(false);
-  const [visited, setVisited] = useState(false)
-  const [hover, setHover] = useState(false)
   const map = useRef(null);
   const wrapper = useRef(null);
 
@@ -28,7 +26,6 @@ const Home = () => {
   };
 
   const handleVisited = () =>{
-    setVisited(true)
     document.getElementById("content").classList.add('fadein')
     document.getElementById("content").classList.remove('initial')
     document.getElementById("office").classList.remove('unvisited')
@@ -349,9 +346,6 @@ const Home = () => {
                   stroke="#000"
                   strokeLinecap="butt"
                   strokeWidth="12.64"
-                  // style={hover && !visited ? {fill: "peru"} : undefined}
-                  // onMouseEnter={()=>setHover(true)}
-                  // onMouseLeave={()=>setHover(false)}
                   onMouseDown={()=>handleVisited()}
                   onClick={()=>{
                     setTransform(-window.innerWidth, -window.innerHeight, 3, 1500, "easeOut")
