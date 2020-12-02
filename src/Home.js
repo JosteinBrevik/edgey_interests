@@ -39,6 +39,7 @@ const Home = () => {
         <React.Fragment>
           <TransformComponent>
             <div
+              id="wrapper"
               ref={wrapper}
               onMouseDown={() => handleMouseDown()}
               onMouseMove={(e) => handleMouseMove(e)}

@@ -8,3 +8,14 @@ svg {
     font-size: calc(10px + 2vmin);
     color: white;
   }
+
+  div{
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #wrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
