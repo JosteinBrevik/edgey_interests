@@ -1,10 +1,14 @@
-import './App.css';
-import Routes from './Routes'
+import "./App.css";
+import Routes from "./Routes";
+import Snowfall from "react-snowfall";
 
-const App = () =>{
+const App = () => {
   return (
-    <Routes/>
+    <div>
+      <Routes />
+      <Snowfall snowflakeCount={50} color="#e5eceb" />
+    </div>
   );
-}
+};
 
 export default App;
