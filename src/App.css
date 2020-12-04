@@ -13,3 +13,8 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+#root{
+  background: radial-gradient(#E5E5E5, #b7b8c0,   #878891, #4d4f5a, #0d0d25);
+  background-repeat: no-repeat;
+}
