@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div>
       <Routes />
-      <Snowfall snowflakeCount={50} color="#e5eceb" />
+      {/* <Snowfall snowflakeCount={50} color="#e5eceb" /> */}
     </div>
   );
 };
