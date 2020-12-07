@@ -47,8 +47,10 @@ const Home = () => {
 
     const skew = percentageOfMax > 80 ? sign * 0.07 * percentageOfMax : 0;
 
+    const offset = percentageOfMax > 80 ? -(window.innerHeight/4 * percentageOfMax/100 - window.innerHeight/8) : 0;
+
     if (percentageOfMax < 100) {
-      map.current.style.transition = "transform .2s";
+      map.current.style.transition = "transform .5s";
       if (newScale >= 1) {
         map.current.style.transform =
           // "rotate(40deg)"
@@ -64,7 +66,7 @@ const Home = () => {
           "," +
           0 +
           "," +
-          -(window.innerHeight/4 * percentageOfMax/100 - window.innerHeight/8) +
+          offset +
           ")";
         setScale(newScale);
       }
