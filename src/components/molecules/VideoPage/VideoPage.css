@@ -1,6 +1,5 @@
   
   .VideoPage-body {
-    background-color: #282c34;
     min-height: 100vh;
     min-width: 100vw;
     display: flex;
@@ -9,6 +8,11 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
+    -webkit-animation: fadein 1.5s ease-in; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1.5s ease-in; /* Firefox < 16 */
+    -ms-animation: fadein 1.5s ease-in; /* Internet Explorer */
+    -o-animation: fadein 1.5s ease-in; /* Opera < 12.1 */
+    animation: fadein 1.5s ease-in;
   }
 
   .video-back-button{
@@ -17,3 +21,62 @@
     left: 0;
   }
   
+  
+  @keyframes fadein {
+    from {
+      opacity: 0;
+      filter: blur(4px);
+    }
+    to {
+      opacity: 1;
+      filter: blur(0px);
+    }
+  }
+  
+  /* Firefox < 16 */
+  @-moz-keyframes fadein {
+    from {
+      opacity: 0;
+      filter: blur(4px);
+    }
+    to {
+      opacity: 1;
+      filter: blur(0px);
+    }
+  }
+  
+  /* Safari, Chrome and Opera > 12.1 */
+  @-webkit-keyframes fadein {
+    from {
+      opacity: 0;
+      filter: blur(4px);
+    }
+    to {
+      opacity: 1;
+      filter: blur(0px);
+    }
+  }
+  
+  /* Internet Explorer */
+  @-ms-keyframes fadein {
+    from {
+      opacity: 0;
+      filter: blur(4px);
+    }
+    to {
+      opacity: 1;
+      filter: blur(0px);
+    }
+  }
+  
+  /* Opera < 12.1 */
+  @-o-keyframes fadein {
+    from {
+      opacity: 0;
+      filter: blur(4px);
+    }
+    to {
+      opacity: 1;
+      filter: blur(0px);
+    }
+  }

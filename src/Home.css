@@ -39,63 +39,75 @@ svg {
   fill: white;
 }
 
-#content.fadein{
+#content.fadeout{
   display: block;
 }
 
-#office.fadein{
-  -webkit-animation: fadein 1.5s ease-in; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 1.5s ease-in; /* Firefox < 16 */
-  -ms-animation: fadein 1.5s ease-in; /* Internet Explorer */
-  -o-animation: fadein 1.5s ease-in; /* Opera < 12.1 */
-  animation: fadein 1.5s ease-in;
+
+#map.fadeout{
+  -webkit-animation: fadeout 0.7s ease-in; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadeout 0.7s ease-in; /* Firefox < 16 */
+  -ms-animation: fadeout 0.7s ease-in; /* Internet Explorer */
+  -o-animation: fadeout 0.7s ease-in; /* Opera < 12.1 */
+  animation: fadeout 0.7s ease-in;
+  opacity: 0
 }
 
-@keyframes fadein {
+@keyframes fadeout {
   from {
     opacity: 1;
+    filter: blur(0);
   }
   to {
     opacity: 0;
+    filter: blur(4px);
   }
 }
 
 /* Firefox < 16 */
-@-moz-keyframes fadein {
+@-moz-keyframes fadeout {
   from {
     opacity: 1;
+    filter: blur(0);
   }
   to {
     opacity: 0;
+    filter: blur(4px);
   }
 }
 
 /* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
+@-webkit-keyframes fadeout {
   from {
     opacity: 1;
+    filter: blur(0);
   }
   to {
     opacity: 0;
+    filter: blur(4px);
   }
 }
 
 /* Internet Explorer */
-@-ms-keyframes fadein {
+@-ms-keyframes fadeout {
   from {
     opacity: 1;
+    filter: blur(0);
   }
   to {
     opacity: 0;
+    filter: blur(4px);
   }
 }
 
 /* Opera < 12.1 */
-@-o-keyframes fadein {
+@-o-keyframes fadeout {
   from {
     opacity: 1;
+    filter: blur(0);
   }
   to {
     opacity: 0;
+    filter: blur(4px);
   }
 }
