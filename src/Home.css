@@ -1,8 +1,8 @@
 svg {
-  max-height: 100vh;
-  min-width: 100vw;
+  max-height: 100%;
+  min-width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -28,7 +28,7 @@ svg {
 
 
 #office.unvisited:hover{
-  fill: #FDEC96;
+  fill: #FFFFFF;
 }
 
 #office.visited{
