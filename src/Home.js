@@ -9,7 +9,7 @@ const Home = () => {
   const map = useRef(null);
   const office = useRef(null);
   const wrapper = useRef(null);
-  const [skew, setSkew] = useState(0)
+  const [skew, setSkew] = useState(0);
 
   const handleMouseDown = () => {
     setMouseDown(true);
@@ -29,11 +29,8 @@ const Home = () => {
   };
 
   const handleVisited = () => {
-    // document.getElementById("content").classList.add("fadeout");
-    // document.getElementById("content").classList.remove("initial");
     document.getElementById("office").classList.remove("unvisited");
     map.current.classList.add("fadeout");
-    // map.current.classList.add("visited");
   };
 
   const handleWheel = (e) => {
@@ -41,13 +38,19 @@ const Home = () => {
 
     const percentageOfMax = (newScale / 8) * 100;
 
-    const sign = e.deltaY/Math.abs(e.deltaY) > 0 ? 1 : -0.1
+    const sign = e.deltaY / Math.abs(e.deltaY) > 0 ? 1 : -0.1;
 
-    console.log(sign)
+    console.log(sign);
 
     const skew = percentageOfMax > 80 ? sign * 0.07 * percentageOfMax : 0;
 
-    const offset = percentageOfMax > 80 ? -(window.innerHeight/4 * percentageOfMax/100 - window.innerHeight/8) : 0;
+    const offset =
+      percentageOfMax > 80
+        ? -(
+            ((window.innerHeight / 4) * percentageOfMax) / 100 -
+            window.innerHeight / 8
+          )
+        : 0;
 
     if (percentageOfMax < 100) {
       map.current.style.transition = "transform .5s";
@@ -67,10 +70,9 @@ const Home = () => {
           offset +
           ")";
         setScale(newScale);
-        setSkew(skew)
+        setSkew(skew);
       }
     }
-
   };
 
   return (
@@ -216,25 +218,24 @@ const Home = () => {
               className="unvisited"
               onMouseDown={() => handleVisited()}
               onClick={() => {
-                const autoSkew = skew != 0 ? skew : 6
+                const autoSkew = skew != 0 ? skew : 6;
                 map.current.style.transition = "transform 1s";
-                  map.current.style.transform =
-                  
-                    "matrix(" +
-                    8 +
-                    "," +
-                    autoSkew +
-                    "," +
-                    -autoSkew  +
-                    "," +
-                    8 +
-                    "," +
-                    0 +
-                    "," +
-                    -(window.innerHeight/4 * 0.9 - window.innerHeight/8)+
-                    ")";
-                  setScale(8);
-                  setTimeout(()=>history.push("/falketind"), 1000)
+                map.current.style.transform =
+                  "matrix(" +
+                  8 +
+                  "," +
+                  autoSkew +
+                  "," +
+                  -autoSkew +
+                  "," +
+                  8 +
+                  "," +
+                  0 +
+                  "," +
+                  -((window.innerHeight / 4) * 0.9 - window.innerHeight / 8) +
+                  ")";
+                setScale(8);
+                setTimeout(() => history.push("/office"), 1000);
               }}
             />
           </g>
@@ -358,4 +359,3 @@ const Home = () => {
 };
 
 export default Home;
-
