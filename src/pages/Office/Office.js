@@ -3,11 +3,6 @@ import "./Office.css";
 import { useHistory } from "react-router-dom";
 
 const Home = () => {
-  const history = useHistory();
-  const map = useRef(null);
-  const office = useRef(null);
-  const wrapper = useRef(null);
-
   return (
     <div id="office-wrapper">
       <svg
