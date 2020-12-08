@@ -1,8 +1,8 @@
-svg {
-  max-height: 100vh;
-  min-width: 100vw;
+#map {
+  max-height: 100%;
+  min-width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -12,79 +12,99 @@ svg {
 #wrapper {
   width: 100vw;
   height: 100vh;
-}
-
-#wrapper {
+  overflow: hidden;
   display: flex;
   justify-content: center;
   flex-direction: row;
 }
 
+
 #content.initial{
-  opacity: 0;
+  display: none;
 }
 
+
 #office.unvisited:hover{
-  fill: rgb(252, 227, 86);
+  fill: #FFFFFF;
+}
+
+#office.visited{
+  opacity: 0;
 }
 
 #office:hover{
   fill: white;
 }
 
-#content.fadein{
-  -webkit-animation: fadein 1.5s ease-in; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 1.5s ease-in; /* Firefox < 16 */
-  -ms-animation: fadein 1.5s ease-in; /* Internet Explorer */
-  -o-animation: fadein 1.5s ease-in; /* Opera < 12.1 */
-  animation: fadein 1.5s ease-in;
+#content.fadeout{
+  display: block;
 }
 
-@keyframes fadein {
+
+#map.fadeout{
+  -webkit-animation: fadeout 0.7s ease-in; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadeout 0.7s ease-in; /* Firefox < 16 */
+  -ms-animation: fadeout 0.7s ease-in; /* Internet Explorer */
+  -o-animation: fadeout 0.7s ease-in; /* Opera < 12.1 */
+  animation: fadeout 0.7s ease-in;
+  opacity: 0
+}
+
+@keyframes fadeout {
   from {
-    opacity: 0;
+    opacity: 1;
+    filter: blur(0);
   }
   to {
-    opacity: 1;
+    opacity: 0;
+    filter: blur(4px);
   }
 }
 
 /* Firefox < 16 */
-@-moz-keyframes fadein {
+@-moz-keyframes fadeout {
   from {
-    opacity: 0;
+    opacity: 1;
+    filter: blur(0);
   }
   to {
-    opacity: 1;
+    opacity: 0;
+    filter: blur(4px);
   }
 }
 
 /* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
+@-webkit-keyframes fadeout {
   from {
-    opacity: 0;
+    opacity: 1;
+    filter: blur(0);
   }
   to {
-    opacity: 1;
+    opacity: 0;
+    filter: blur(4px);
   }
 }
 
 /* Internet Explorer */
-@-ms-keyframes fadein {
+@-ms-keyframes fadeout {
   from {
-    opacity: 0;
+    opacity: 1;
+    filter: blur(0);
   }
   to {
-    opacity: 1;
+    opacity: 0;
+    filter: blur(4px);
   }
 }
 
 /* Opera < 12.1 */
-@-o-keyframes fadein {
+@-o-keyframes fadeout {
   from {
-    opacity: 0;
+    opacity: 1;
+    filter: blur(0);
   }
   to {
-    opacity: 1;
+    opacity: 0;
+    filter: blur(4px);
   }
 }

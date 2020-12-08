@@ -1,19 +1,61 @@
   
   .VideoPage-body {
-    background-color: #282c34;
-    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .video-background{
+    max-height: 100vh;
     min-width: 100vw;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: white;
   }
 
-  .video-back-button{
-    width: 100%;
-    flex-direction: row;
-    left: 0;
+  .backButton-wrapper{
+    display: flex;
+    justify-content: start;
+    max-height: 33.33vh;
   }
-  
+
+  .video-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+    height: 33.75vw;
+  }
+
+  .footer-wrapper {
+    max-height: 6.1551vw;
+    width: 100vw;
+    
+  }
+
+  #snow{
+    max-height: 100%;
+    width: 100%;
+  }
+
+
+  @media only screen and (max-height: 530px) {
+    .video-wrapper{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100vw;
+      height: 20vw;
+    }
+    #snow{
+      padding-top: 3px;
+      max-height: 100%;
+      width: 100%;
+    }
+  }
+

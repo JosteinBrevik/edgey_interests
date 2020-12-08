@@ -1,14 +1,21 @@
 import "./VideoPage.css";
 import VideoPlayer from "../../atoms/VideoPlayer/VideoPlayer";
 import BackButton from "../../atoms/BackButton/BackButton";
+import {ReactComponent as Snow} from '../../../assets/snow.svg';
 
 const VideoPage = ({ videoID }) => {
   return (
     <body className="VideoPage-body">
-      <div className="video-back-button">
-        <BackButton BackPage="" />
+      <div className="backButton-wrapper">
+        <BackButton BackPage="office" />
       </div>
-      <VideoPlayer videoID={videoID} />
+
+      <div className="video-wrapper">
+        <VideoPlayer videoID={videoID} />
+      </div>
+      <div className="footer-wrapper">
+        <Snow/>
+      </div>
     </body>
   );
 };

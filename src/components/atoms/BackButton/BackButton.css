@@ -3,15 +3,11 @@
     border: none;
     margin-left: 2rem;
     margin-top: 3rem;
-    text-decoration: none;
-    background: none;
-    font-family: sans-serif;
-    cursor: pointer;
-    text-align: center;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    max-width: 10vw;
+    max-height: 4vh;
 }
 
-img {
-    width: 4vw;
+#back-arrow{
+    height: 100%;
+    width: 100%;
 }
