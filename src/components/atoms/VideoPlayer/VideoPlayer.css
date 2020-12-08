@@ -1,4 +1,11 @@
 .YoutubeVideo {
-  width: 100%;
+  width: 60%;
   height: 100%;
+}
+
+@media only screen and (max-height: 530px) {
+  .YoutubeVideo {
+    width: 35.555%;
+    height: 100%;
+  }
 }
