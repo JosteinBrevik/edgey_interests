@@ -1,7 +1,6 @@
 import "./VideoPage.css";
 import VideoPlayer from "../../atoms/VideoPlayer/VideoPlayer";
 import BackButton from "../../atoms/BackButton/BackButton";
-import {ReactComponent as Trees} from '../../../assets/christmas_trees.svg';
 import {ReactComponent as Snow} from '../../../assets/snow.svg';
 
 const VideoPage = ({ videoID }) => {
