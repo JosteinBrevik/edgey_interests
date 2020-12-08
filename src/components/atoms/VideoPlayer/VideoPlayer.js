@@ -7,8 +7,12 @@ const VideoPlayer = ({ videoID }) => {
         className= "YoutubeVideo"
         src={"https://www.youtube.com/embed/" + videoID + "?autoplay=1"}
         frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
+        allow="autoplay"
+        allowFullScreen="allowfullscreen"
+        mozallowfullscreen="mozallowfullscreen" 
+        msallowfullscreen="msallowfullscreen" 
+        oallowfullscreen="oallowfullscreen" 
+        webkitallowfullscreen="webkitallowfullscreen"
       />
   );
 };

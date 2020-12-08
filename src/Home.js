@@ -12,7 +12,7 @@ const Home = () => {
   const [skew, setSkew] = useState(0);
 
   useEffect(() => {
-    handleWheel({ deltaY: 20 });
+    handleWheel({ deltaY: 10 });
 
     setTimeout(() => {
       handleWheel({ deltaY: 0 });
@@ -43,7 +43,6 @@ const Home = () => {
   };
 
   const handleWheel = (e) => {
-    console.log(e.deltaY);
     const newScale = scale + e.deltaY * 0.02;
 
     const percentageOfMax = (newScale / 8) * 100;
