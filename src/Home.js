@@ -18,6 +18,7 @@ const Home = () => {
       handleWheel({ deltaY: 0 });
       handleWheel({ deltaY: -1 });
     }, 500);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleMouseDown = () => {

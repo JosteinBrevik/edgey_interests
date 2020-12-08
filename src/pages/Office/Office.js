@@ -1,8 +1,6 @@
 import "./Office.css";
 import { Link } from "react-router-dom";
 
-{/* <Link to="/snøhetta"></Link> */}
-
 const Office = () => {
   return (
     <div id="office-wrapper">
