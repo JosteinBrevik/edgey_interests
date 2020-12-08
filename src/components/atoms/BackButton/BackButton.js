@@ -1,5 +1,4 @@
 import "./BackButton.css";
-import BackArrowSVG from "../../../assets/back-arrow.svg";
 import { Link } from "react-router-dom";
 
 const BackButton = ({ BackPage }) => (

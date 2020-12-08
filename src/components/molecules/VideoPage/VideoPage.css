@@ -43,6 +43,7 @@
     width: 100%;
   }
 
+
   @media only screen and (max-height: 530px) {
     .video-wrapper{
       display: flex;
