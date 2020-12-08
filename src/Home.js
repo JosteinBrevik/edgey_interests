@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./Home.css";
 import { useHistory } from "react-router-dom";
 
@@ -10,6 +10,16 @@ const Home = () => {
   const office = useRef(null);
   const wrapper = useRef(null);
   const [skew, setSkew] = useState(0);
+
+  useEffect(() => {
+    handleWheel({ deltaY: 10 });
+
+    setTimeout(() => {
+      handleWheel({ deltaY: 0 });
+      handleWheel({ deltaY: -1 });
+    }, 500);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleMouseDown = () => {
     setMouseDown(true);
@@ -39,8 +49,6 @@ const Home = () => {
     const percentageOfMax = (newScale / 8) * 100;
 
     const sign = e.deltaY / Math.abs(e.deltaY) > 0 ? 1 : -0.1;
-
-    console.log(sign);
 
     const skew = percentageOfMax > 80 ? sign * 0.07 * percentageOfMax : 0;
 
