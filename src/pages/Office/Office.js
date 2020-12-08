@@ -1,8 +1,7 @@
-import React, { useState, useRef } from "react";
-import "./Office.css";
-import { useHistory } from "react-router-dom";
 
-const Home = () => {
+import "./Office.css";
+
+const Office = () => {
   return (
     <div id="office-wrapper">
       <svg
@@ -34711,4 +34710,4 @@ const Home = () => {
   //   return <object data="Office_map.svg" alt="Kiwi standing on oval" />;
 };
 
-export default Home;
+export default Office;

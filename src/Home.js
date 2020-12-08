@@ -218,7 +218,7 @@ const Home = () => {
               className="unvisited"
               onMouseDown={() => handleVisited()}
               onClick={() => {
-                const autoSkew = skew != 0 ? skew : 6;
+                const autoSkew = skew !== 0 ? skew : 6;
                 map.current.style.transition = "transform 1s";
                 map.current.style.transform =
                   "matrix(" +
