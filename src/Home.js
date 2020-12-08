@@ -11,17 +11,14 @@ const Home = () => {
   const wrapper = useRef(null);
   const [skew, setSkew] = useState(0);
 
-  useEffect(()=>{
+  useEffect(() => {
+    handleWheel({ deltaY: 20 });
 
-      handleWheel({deltaY: 20}) 
-
-    
-    setTimeout(()=>{
-      handleWheel({deltaY: 0}) 
-      handleWheel({deltaY: -1})
-    }, 500)
-    
-  },[])
+    setTimeout(() => {
+      handleWheel({ deltaY: 0 });
+      handleWheel({ deltaY: -1 });
+    }, 500);
+  }, []);
 
   const handleMouseDown = () => {
     setMouseDown(true);
@@ -46,8 +43,7 @@ const Home = () => {
   };
 
   const handleWheel = (e) => {
-
-    console.log(e.deltaY)
+    console.log(e.deltaY);
     const newScale = scale + e.deltaY * 0.02;
 
     const percentageOfMax = (newScale / 8) * 100;
