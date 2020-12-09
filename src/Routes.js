@@ -10,11 +10,20 @@ const Routes = () => {
       <Route path="/office">
           <Office />
         </Route>
-        <Route path="/snøhetta">
+        <Route path="/horse">
           <VideoPage videoID="wrTzpakmJTE?start=1813" />
         </Route>
-        <Route path="/falketind">
-          <VideoPage videoID="rXqAU2v_5Io" />
+        <Route path="/gingerbread">
+          <VideoPage videoID="dHKH65qOG-U" />
+        </Route>
+        <Route path="/fireplace">
+          <VideoPage videoID="wrTzpakmJTE?start=1813" />
+        </Route>
+        <Route path="/packets">
+          <VideoPage videoID="wrTzpakmJTE?start=1813" />
+        </Route>
+        <Route path="/ornaments">
+          <VideoPage videoID="wrTzpakmJTE?start=1813" />
         </Route>
         <Route path="/">
           <Home />
@@ -25,3 +34,5 @@ const Routes = () => {
 };
 
 export default Routes;
+
+
