@@ -13,7 +13,12 @@
     animation: fadein 2s ease-in;
 }
 
-#balls.disabled, #fireplace.disabled, #packets.disabled, #ginger.disabled, #horse.disabled{
+#balls.disabled, #fireplace.disabled, #packets.disabled, #ginger.disabled{
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+#balls.hide, #fireplace.hide, #packets.hide, #ginger.hide, #horse.hide{
   -webkit-animation: fadeOutObjects 0.5s ease-in; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadeOutObjects 0.5s ease-in; /* Firefox < 16 */
     -ms-animation: fadeOutObjects 0.5s ease-in; /* Internet Explorer */
@@ -22,7 +27,7 @@
     opacity: 0.3;
 }
 
-#balls.enabled, #fireplace.enabled, #packets.enabled, #ginger.enabled, #horse.enabled{
+#balls.show, #fireplace.show, #packets.show, #ginger.show, #horse.show{
   -webkit-animation: fadeinObjects 0.5s ease-in; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadeinObjects 0.5s ease-in; /* Firefox < 16 */
     -ms-animation: fadeinObjects 0.5s ease-in; /* Internet Explorer */
