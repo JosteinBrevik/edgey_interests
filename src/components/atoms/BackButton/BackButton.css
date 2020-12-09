@@ -1,0 +1,13 @@
+.BackButton{
+    display: inline-block;
+    border: none;
+    margin-left: 2rem;
+    margin-top: 3rem;
+    max-width: 10vw;
+    max-height: 4vh;
+}
+
+#back-arrow{
+    height: 100%;
+    width: 100%;
+}
