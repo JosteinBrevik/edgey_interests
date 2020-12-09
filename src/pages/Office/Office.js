@@ -41,6 +41,7 @@ const Office = () => {
     if (isCLicked) {
       clearTimeout(leaveTimeout);
       Object.keys(elements).forEach((element) => {
+        document.getElementById(element).classList.remove("hide");
         document.getElementById(element).classList.remove("show");
       });
       delete elements[e];
@@ -56,8 +57,8 @@ const Office = () => {
         Object.keys(elements).forEach((element) => {
           if (element !== e) {
             document.getElementById(element).classList.add("show");
-            document.getElementById(element).classList.remove("hide");
           }
+          document.getElementById(element).classList.remove("hide");
         });
       }, 300);
       setLeaveTimeout(leaveTimeout);
@@ -212,7 +213,7 @@ const Office = () => {
           />
           <Link
             id="ginger"
-            to="/snøhetta"
+            to="/gingerbread"
             onMouseEnter={() => handleMouseEnter("ginger")}
             onMouseLeave={() => handleMouseLeave("ginger")}
           >
@@ -436,7 +437,7 @@ const Office = () => {
           </Link>
           <Link
             id="horse"
-            to="/snøhetta"
+            to="/horse"
             onMouseEnter={() => handleMouseEnter("horse")}
             onMouseLeave={() => handleMouseLeave("horse")}
             onClick={() => handleClick()}
@@ -532,7 +533,7 @@ const Office = () => {
           </g>
           <Link
             id="fireplace"
-            to="/snøhetta"
+            to="/fireplace"
             onMouseEnter={() => handleMouseEnter("fireplace")}
             onMouseLeave={() => handleMouseLeave("fireplace")}
           >
@@ -890,7 +891,7 @@ const Office = () => {
           </Link>
           <Link
             id="balls"
-            to="/snøhetta"
+            to="/ornaments"
             onMouseEnter={() => handleMouseEnter("balls")}
             onMouseLeave={() => handleMouseLeave("balls")}
           >
@@ -1013,7 +1014,7 @@ const Office = () => {
           </Link>
           <Link
             id="packets"
-            to="/snøhetta"
+            to="/packets"
             onMouseEnter={() => handleMouseEnter("packets")}
             onMouseLeave={() => handleMouseLeave("packets")}
           >
