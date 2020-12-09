@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import "./Office.css";
 import { Link } from "react-router-dom";
 
@@ -9,7 +10,8 @@ const Office = () => {
     fireplace: "fireplace",
     packets: "packets",
   };
-  let leaveTimeout = null;
+
+  const [leaveTimeout, setLeaveTimeout] = useState(null);
 
   const handleMouseEnter = (e) => {
     clearTimeout(leaveTimeout);
@@ -23,7 +25,7 @@ const Office = () => {
   };
 
   const handleMouseLeave = (e) => {
-    leaveTimeout = setTimeout(() => {
+    const leaveTimeout = setTimeout(() => {
       Object.keys(elements).forEach((element) => {
         if (element !== e) {
           document.getElementById(element).classList.add("enabled");
@@ -31,6 +33,7 @@ const Office = () => {
         }
       });
     }, 300);
+    setLeaveTimeout(leaveTimeout);
     elements[e] = e;
   };
 
@@ -174,8 +177,12 @@ const Office = () => {
             d="M3159.59 2093.37C3057.48 2090.96 2972.6 2178.09 2970 2287.99L3339.78 2296.72C3342.38 2186.82 3261.7 2095.78 3159.59 2093.37Z"
             fill="#23263D"
           />
-          <Link id="ginger" to="/snøhetta"  onMouseEnter={() => handleMouseEnter("ginger")}
-              onMouseLeave={() => handleMouseLeave("ginger")}>
+          <Link
+            id="ginger"
+            to="/snøhetta"
+            onMouseEnter={() => handleMouseEnter("ginger")}
+            onMouseLeave={() => handleMouseLeave("ginger")}
+          >
             <g>
               <circle
                 cx="831.412"
