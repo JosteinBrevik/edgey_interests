@@ -13,6 +13,29 @@
     animation: fadein 2s ease-in;
 }
 
+#balls.disabled, #fireplace.disabled, #packets.disabled, #ginger.disabled{
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+#balls.hide, #fireplace.hide, #packets.hide, #ginger.hide, #horse.hide{
+  -webkit-animation: fadeOutObjects 0.5s ease-in; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadeOutObjects 0.5s ease-in; /* Firefox < 16 */
+    -ms-animation: fadeOutObjects 0.5s ease-in; /* Internet Explorer */
+    -o-animation: fadeOutObjects 0.5s ease-in; /* Opera < 12.1 */
+    animation: fadeOutObjects 0.5s ease-in;
+    opacity: 0.3;
+}
+
+#balls.show, #fireplace.show, #packets.show, #ginger.show, #horse.show{
+  -webkit-animation: fadeinObjects 0.5s ease-in; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadeinObjects 0.5s ease-in; /* Firefox < 16 */
+    -ms-animation: fadeinObjects 0.5s ease-in; /* Internet Explorer */
+    -o-animation: fadeinObjects 0.5s ease-in; /* Opera < 12.1 */
+    animation: fadeinObjects 0.5s ease-in;
+}
+
+
 
 #office-wrapper {
     width: 100vw;
@@ -80,5 +103,124 @@
     to {
       opacity: 1;
       filter: blur(0px);
+    }
+  }
+
+      
+  @keyframes fadeinObjects {
+    from {
+      opacity: 0.3;
+
+    }
+    to {
+      opacity: 1;
+
+    }
+  }
+  
+  /* Firefox < 16 */
+  @-moz-keyframes fadeinObjects {
+    from {
+      opacity: 0.3;
+
+    }
+    to {
+      opacity: 1;
+
+    }
+  }
+  
+  /* Safari, Chrome and Opera > 12.1 */
+  @-webkit-keyframes fadeinObjects {
+    from {
+      opacity: 0.3;
+
+    }
+    to {
+      opacity: 1;
+
+    }
+  }
+  
+  /* Internet Explorer */
+  @-ms-keyframes fadeinObjects {
+    from {
+      opacity: 0.3;
+
+    }
+    to {
+      opacity: 1;
+
+    }
+  }
+  
+  /* Opera < 12.1 */
+  @-o-keyframes fadeinObjects {
+    from {
+      opacity: 0.3;
+
+    }
+    to {
+      opacity: 1;
+
+    }
+  }
+
+  @keyframes fadeOutObjects {
+    from {
+      opacity: 1;
+
+    }
+    to {
+      opacity: 0.3;
+
+    }
+  }
+  
+  /* Firefox < 16 */
+  @-moz-keyframes fadeOutObjects {
+    from {
+      opacity: 1;
+
+    }
+    to {
+      opacity: 0.3;
+
+    }
+  }
+  
+  /* Safari, Chrome and Opera > 12.1 */
+  @-webkit-keyframes fadeOutObjects {
+    from {
+      opacity: 1;
+
+    }
+    to {
+      opacity: 0.3;
+
+    }
+  }
+  
+  /* Internet Explorer */
+  @-ms-keyframes fadeOutObjects {
+    from {
+      opacity: 1;
+
+    }
+    to {
+      opacity: 0.3;
+
+    }
+  }
+  
+  /* Opera < 12.1 */
+  @-o-keyframes fadeOutObjects {
+    from {
+      opacity: 1;
+
+    }
+    to {
+      opacity: 0.3;
+
     }
   }
