@@ -41,6 +41,7 @@ const Office = () => {
     if (isCLicked) {
       clearTimeout(leaveTimeout);
       Object.keys(elements).forEach((element) => {
+        document.getElementById(element).classList.remove("hide");
         document.getElementById(element).classList.remove("show");
       });
       delete elements[e];
@@ -56,8 +57,8 @@ const Office = () => {
         Object.keys(elements).forEach((element) => {
           if (element !== e) {
             document.getElementById(element).classList.add("show");
-            document.getElementById(element).classList.remove("hide");
           }
+          document.getElementById(element).classList.remove("hide");
         });
       }, 300);
       setLeaveTimeout(leaveTimeout);
