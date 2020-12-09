@@ -6,8 +6,7 @@ const Office = () => {
   const [isCLicked, setIsClicked] = useState(false);
 
   useEffect(() => {
-
-    const clicked = localStorage.getItem("clicked")
+    const clicked = localStorage.getItem("clicked");
 
     if (!clicked) {
       setIsClicked(false);
@@ -21,10 +20,11 @@ const Office = () => {
       setIsClicked(true);
       Object.keys(elements).forEach((element) => {
         if (element !== "horse") {
-            document.getElementById(element).classList.remove("disabled");
+          document.getElementById(element).classList.remove("disabled");
         }
       });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const elements = {
@@ -65,11 +65,10 @@ const Office = () => {
     }
   };
 
-  const handleClick = () =>{
-    setIsClicked(true)
+  const handleClick = () => {
+    setIsClicked(true);
     localStorage.setItem("clicked", true);
-
-  }
+  };
 
   return (
     <div id="office-wrapper">
@@ -440,7 +439,7 @@ const Office = () => {
             to="/snøhetta"
             onMouseEnter={() => handleMouseEnter("horse")}
             onMouseLeave={() => handleMouseLeave("horse")}
-            onClick={()=>handleClick()}
+            onClick={() => handleClick()}
           >
             <g>
               <path
