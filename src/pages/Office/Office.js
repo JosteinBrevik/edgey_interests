@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Office.css";
 import { Link } from "react-router-dom";
 
@@ -409,6 +409,7 @@ const Office = () => {
             id="horse"
             href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_YWVmZWYyNjMtZDk5Yi00ODMwLWE5NjQtNDBiZTFhZjlmNDA5%40thread.v2/0?context=%7b%22Tid%22%3a%22d4110288-bf1e-4337-97ab-a5c51371dcea%22%2c%22Oid%22%3a%22fd2dcfa0-44b9-4927-8257-f88bf3a72560%22%7d"
             target="_blank"
+            rel="noreferrer"
             onMouseEnter={() => handleMouseEnter("horse")}
             onMouseLeave={() => handleMouseLeave("horse")}
           >

@@ -25,7 +25,7 @@
 
   .backButton-wrapper{
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     max-height: 33.33vh;
   }
 
