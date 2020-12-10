@@ -5,7 +5,7 @@ const VideoPlayer = ({ videoID }) => {
       <iframe
         title = "YoutubeVideo"
         className= "YoutubeVideo"
-        src={"https://www.youtube.com/embed/" + videoID + "?autoplay=1"}
+        src={ videoID }
         frameborder="0"
         allow="autoplay"
         allowFullScreen="allowfullscreen"

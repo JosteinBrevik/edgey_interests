@@ -12,11 +12,11 @@ const Home = () => {
   const [skew, setSkew] = useState(0);
 
   useEffect(() => {
-    handleWheel({ deltaY: 10 });
+    handleWheel({ deltaY: -10 });
 
     setTimeout(() => {
       handleWheel({ deltaY: 0 });
-      handleWheel({ deltaY: -1 });
+      handleWheel({ deltaY: 1 });
     }, 500);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -44,11 +44,11 @@ const Home = () => {
   };
 
   const handleWheel = (e) => {
-    const newScale = scale + e.deltaY * 0.02;
+    const newScale = scale + -e.deltaY * 0.02;
 
     const percentageOfMax = (newScale / 8) * 100;
 
-    const sign = e.deltaY / Math.abs(e.deltaY) > 0 ? 1 : -0.1;
+    const sign = -e.deltaY / Math.abs(e.deltaY) > 0 ? 1 : -0.1;
 
     const skew = percentageOfMax > 80 ? sign * 0.07 * percentageOfMax : 0;
 

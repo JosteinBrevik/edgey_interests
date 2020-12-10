@@ -1,31 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Office.css";
 import { Link } from "react-router-dom";
 
 const Office = () => {
-  const [isCLicked, setIsClicked] = useState(false);
 
-  useEffect(() => {
-    const clicked = localStorage.getItem("clicked");
-
-    if (!clicked) {
-      setIsClicked(false);
-      localStorage.setItem("clicked", false);
-      Object.keys(elements).forEach((element) => {
-        if (element !== "horse") {
-          document.getElementById(element).classList.add("disabled");
-        }
-      });
-    } else {
-      setIsClicked(true);
-      Object.keys(elements).forEach((element) => {
-        if (element !== "horse") {
-          document.getElementById(element).classList.remove("disabled");
-        }
-      });
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   const elements = {
     horse: "horse",
@@ -38,7 +16,6 @@ const Office = () => {
   const [leaveTimeout, setLeaveTimeout] = useState(null);
 
   const handleMouseEnter = (e) => {
-    if (isCLicked) {
       clearTimeout(leaveTimeout);
       Object.keys(elements).forEach((element) => {
         document.getElementById(element).classList.remove("hide");
@@ -48,11 +25,9 @@ const Office = () => {
       Object.keys(elements).forEach((element) => {
         document.getElementById(element).classList.add("hide");
       });
-    }
   };
 
   const handleMouseLeave = (e) => {
-    if (isCLicked) {
       const leaveTimeout = setTimeout(() => {
         Object.keys(elements).forEach((element) => {
           if (element !== e) {
@@ -63,13 +38,8 @@ const Office = () => {
       }, 300);
       setLeaveTimeout(leaveTimeout);
       elements[e] = e;
-    }
   };
 
-  const handleClick = () => {
-    setIsClicked(true);
-    localStorage.setItem("clicked", true);
-  };
 
   return (
     <div id="office-wrapper">
@@ -435,12 +405,13 @@ const Office = () => {
               />
             </g>
           </Link>
-          <Link
+          <a
             id="horse"
-            to="/horse"
+            href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_YWVmZWYyNjMtZDk5Yi00ODMwLWE5NjQtNDBiZTFhZjlmNDA5%40thread.v2/0?context=%7b%22Tid%22%3a%22d4110288-bf1e-4337-97ab-a5c51371dcea%22%2c%22Oid%22%3a%22fd2dcfa0-44b9-4927-8257-f88bf3a72560%22%7d"
+            target="_blank"
+            rel="noreferrer"
             onMouseEnter={() => handleMouseEnter("horse")}
             onMouseLeave={() => handleMouseLeave("horse")}
-            onClick={() => handleClick()}
           >
             <g>
               <path
@@ -504,7 +475,7 @@ const Office = () => {
                 fill="white"
               />
             </g>
-          </Link>
+          </a>
           <mask
             id="mask1"
             mask-type="alpha"
