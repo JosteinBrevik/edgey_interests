@@ -3,29 +3,7 @@ import "./Office.css";
 import { Link } from "react-router-dom";
 
 const Office = () => {
-  const [isCLicked, setIsClicked] = useState(false);
 
-  useEffect(() => {
-    const clicked = localStorage.getItem("clicked");
-
-    if (!clicked) {
-      setIsClicked(false);
-      localStorage.setItem("clicked", false);
-      Object.keys(elements).forEach((element) => {
-        if (element !== "horse") {
-          document.getElementById(element).classList.add("disabled");
-        }
-      });
-    } else {
-      setIsClicked(true);
-      Object.keys(elements).forEach((element) => {
-        if (element !== "horse") {
-          document.getElementById(element).classList.remove("disabled");
-        }
-      });
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   const elements = {
     horse: "horse",
@@ -38,7 +16,6 @@ const Office = () => {
   const [leaveTimeout, setLeaveTimeout] = useState(null);
 
   const handleMouseEnter = (e) => {
-    if (isCLicked) {
       clearTimeout(leaveTimeout);
       Object.keys(elements).forEach((element) => {
         document.getElementById(element).classList.remove("hide");
@@ -48,11 +25,9 @@ const Office = () => {
       Object.keys(elements).forEach((element) => {
         document.getElementById(element).classList.add("hide");
       });
-    }
   };
 
   const handleMouseLeave = (e) => {
-    if (isCLicked) {
       const leaveTimeout = setTimeout(() => {
         Object.keys(elements).forEach((element) => {
           if (element !== e) {
@@ -63,13 +38,8 @@ const Office = () => {
       }, 300);
       setLeaveTimeout(leaveTimeout);
       elements[e] = e;
-    }
   };
 
-  const handleClick = () => {
-    setIsClicked(true);
-    localStorage.setItem("clicked", true);
-  };
 
   return (
     <div id="office-wrapper">
@@ -440,7 +410,6 @@ const Office = () => {
             to="/horse"
             onMouseEnter={() => handleMouseEnter("horse")}
             onMouseLeave={() => handleMouseLeave("horse")}
-            onClick={() => handleClick()}
           >
             <g>
               <path
