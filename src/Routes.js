@@ -10,20 +10,17 @@ const Routes = () => {
       <Route path="/office">
           <Office />
         </Route>
-        <Route path="/horse">
-          <VideoPage videoID="wrTzpakmJTE?start=1813" />
-        </Route>
         <Route path="/gingerbread">
           <VideoPage videoID="dHKH65qOG-U" />
         </Route>
         <Route path="/fireplace">
-          <VideoPage videoID="wrTzpakmJTE?start=1813" />
+          <VideoPage videoID="hNY52YcAs-w" />
         </Route>
         <Route path="/packets">
-          <VideoPage videoID="wrTzpakmJTE?start=1813" />
+          <VideoPage videoID="HCzSIFdWQGA" />
         </Route>
         <Route path="/ornaments">
-          <VideoPage videoID="wrTzpakmJTE?start=1813" />
+          <VideoPage videoID="vR_gDf_TzUU" />
         </Route>
         <Route path="/">
           <Home />
