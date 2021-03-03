@@ -1,28 +1,28 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import VideoPage from "./components/molecules/VideoPage/VideoPage";
-import Home from "./Home";
-import Office from "./pages/Office/Office"
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import VideoPage from './components/molecules/VideoPage/VideoPage';
+import Home from './Home';
+import Office from './pages/Office/Office';
 
 const Routes = () => {
   return (
     <Router>
       <Switch>
-      <Route path="/office">
+        <Route path='/office'>
           <Office />
         </Route>
-        <Route path="/gingerbread">
-          <VideoPage videoID="https://www.youtube.com/embed/dHKH65qOG-U?autoplay=1" />
+        <Route path='/gingerbread'>
+          <VideoPage videoID='https://www.youtube.com/embed/otBIjC2V_rQ?autoplay=1' />
         </Route>
-        <Route path="/fireplace">
-          <VideoPage videoID="https://www.youtube.com/embed/hNY52YcAs-w?autoplay=1" />
+        <Route path='/fireplace'>
+          <VideoPage videoID='https://www.youtube.com/embed/hNY52YcAs-w?autoplay=1' />
         </Route>
-        <Route path="/packets">
-          <VideoPage videoID="https://www.youtube.com/embed/HCzSIFdWQGA?autoplay=1" />
+        <Route path='/packets'>
+          <VideoPage videoID='https://www.youtube.com/embed/HCzSIFdWQGA?autoplay=1' />
         </Route>
-        <Route path="/ornaments">
-          <VideoPage videoID="https://www.youtube.com/embed/vR_gDf_TzUU?autoplay=1" />
+        <Route path='/ornaments'>
+          <VideoPage videoID='https://www.youtube.com/embed/vR_gDf_TzUU?autoplay=1' />
         </Route>
-        <Route path="/">
+        <Route path='/'>
           <Home />
         </Route>
       </Switch>
@@ -31,6 +31,3 @@ const Routes = () => {
 };
 
 export default Routes;
-
-
-
