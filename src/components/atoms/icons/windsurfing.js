@@ -1,13 +1,6 @@
 const Windsurfing = () => {
   return (
-    <svg
-      width='554.648px'
-      height='554.648px'
-      viewBox='0 0 554.648 554.648'
-      fill='white'
-      width='8%'
-      height='8%'
-    >
+    <svg viewBox='0 0 554.648 554.648' fill='white' width='8%' height='8%'>
       <g>
         <g>
           <path

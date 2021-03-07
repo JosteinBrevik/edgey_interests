@@ -148,7 +148,7 @@ const Office = () => {
                 onMouseEnter={() => handleMouseEnter(id)}
                 onMouseLeave={() => handleMouseLeave(id)}
               >
-                {/* rect to allow hover when svg has "holes" on hover*/}
+                {/* rect to allow hover when svg has "holes"*/}
                 <rect width='8%' height='8%' fill='rgba(0, 0, 0, 0.0)' />
                 {image}
               </Link>
