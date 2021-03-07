@@ -1,125 +1,121 @@
-  
-  .VideoPage-body {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    -webkit-animation: fadein 2s ease-in; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 2s ease-in; /* Firefox < 16 */
-    -ms-animation: fadein 2s ease-in; /* Internet Explorer */
-    -o-animation: fadein 2s ease-in; /* Opera < 12.1 */
-    animation: fadein 2s ease-in;
-  }
+.VideoPage-body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  -webkit-animation: fadein 2s ease-in; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s ease-in; /* Firefox < 16 */
+  -ms-animation: fadein 2s ease-in; /* Internet Explorer */
+  -o-animation: fadein 2s ease-in; /* Opera < 12.1 */
+  animation: fadein 2s ease-in;
+}
 
-  .video-background{
-    max-height: 100vh;
-    min-width: 100vw;
+.video-background {
+  max-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.backButton-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  max-height: 33.33vh;
+}
+
+.video-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100vw;
+  height: 33.75vw;
+  padding-top: 4rem;
+}
+
+.footer-wrapper {
+  max-height: 6.1551vw;
+  width: 100vw;
+}
+
+#snow {
+  max-height: 100%;
+  width: 100%;
+}
+
+@media only screen and (max-height: 530px) {
+  .video-wrapper {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-  }
-
-  .backButton-wrapper{
-    display: flex;
-    justify-content: flex-start;
-    max-height: 33.33vh;
-  }
-
-  .video-wrapper{
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     width: 100vw;
-    height: 33.75vw;
+    height: 20vw;
   }
-
-  .footer-wrapper {
-    max-height: 6.1551vw;
-    width: 100vw;
-    
-  }
-
-  #snow{
+  #snow {
+    padding-top: 3px;
     max-height: 100%;
     width: 100%;
   }
+}
 
+@keyframes fadein {
+  from {
+    opacity: 0;
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
 
-  @media only screen and (max-height: 530px) {
-    .video-wrapper{
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      width: 100vw;
-      height: 20vw;
-    }
-    #snow{
-      padding-top: 3px;
-      max-height: 100%;
-      width: 100%;
-    }
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+    filter: blur(4px);
   }
+  to {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
 
-  @keyframes fadein {
-    from {
-      opacity: 0;
-      filter: blur(4px);
-    }
-    to {
-      opacity: 1;
-      filter: blur(0px);
-    }
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+    filter: blur(4px);
   }
-  
-  /* Firefox < 16 */
-  @-moz-keyframes fadein {
-    from {
-      opacity: 0;
-      filter: blur(4px);
-    }
-    to {
-      opacity: 1;
-      filter: blur(0px);
-    }
+  to {
+    opacity: 1;
+    filter: blur(0px);
   }
-  
-  /* Safari, Chrome and Opera > 12.1 */
-  @-webkit-keyframes fadein {
-    from {
-      opacity: 0;
-      filter: blur(4px);
-    }
-    to {
-      opacity: 1;
-      filter: blur(0px);
-    }
-  }
-  
-  /* Internet Explorer */
-  @-ms-keyframes fadein {
-    from {
-      opacity: 0;
-      filter: blur(4px);
-    }
-    to {
-      opacity: 1;
-      filter: blur(0px);
-    }
-  }
-  
-  /* Opera < 12.1 */
-  @-o-keyframes fadein {
-    from {
-      opacity: 0;
-      filter: blur(4px);
-    }
-    to {
-      opacity: 1;
-      filter: blur(0px);
-    }
-  }
+}
 
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}

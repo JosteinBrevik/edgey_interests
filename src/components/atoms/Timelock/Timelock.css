@@ -1,0 +1,19 @@
+.unlockTimeText {
+  font-size: 4rem;
+  font-weight: bold;
+  fill: white;
+  paint-order: stroke;
+  stroke: #000000;
+  stroke-width: 1px;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  font-weight: 800;
+}
+
+.container {
+  overflow: visible;
+}
+
+.locked {
+  pointer-events: none;
+}

@@ -10,17 +10,35 @@ const Routes = () => {
         <Route path='/office'>
           <Office />
         </Route>
-        <Route path='/gingerbread'>
+        <Route path='/nashville'>
           <VideoPage videoID='https://www.youtube.com/embed/otBIjC2V_rQ?autoplay=1' />
         </Route>
-        <Route path='/fireplace'>
-          <VideoPage videoID='https://www.youtube.com/embed/hNY52YcAs-w?autoplay=1' />
+        <Route path='/workingout'>
+          <VideoPage videoID='https://www.youtube.com/embed/0W4iNfViXEM?autoplay=1' />
         </Route>
-        <Route path='/packets'>
-          <VideoPage videoID='https://www.youtube.com/embed/HCzSIFdWQGA?autoplay=1' />
+        <Route path='/systemdynamics'>
+          <VideoPage videoID='https://www.youtube.com/embed/gweJMS-ahmU?autoplay=1' />
         </Route>
-        <Route path='/ornaments'>
-          <VideoPage videoID='https://www.youtube.com/embed/vR_gDf_TzUU?autoplay=1' />
+        <Route path='/electricskateboards'>
+          <VideoPage videoID='https://www.youtube.com/embed/nH59vkbi750?autoplay=1' />
+        </Route>
+        <Route path='/changinghabits'>
+          <VideoPage videoID='https://www.youtube.com/embed/CQ-qnErof2E?autoplay=1' />
+        </Route>
+        <Route path='/communication'>
+          <VideoPage videoID='https://www.youtube.com/embed/Bq9MUq1Fj-0?autoplay=1' />
+        </Route>
+        <Route path='/taekwondo'>
+          <VideoPage videoID='https://www.youtube.com/embed/CLcM2Ol9d08?autoplay=1' />
+        </Route>
+        <Route path='/interpretiveprecidence'>
+          <VideoPage videoID='https://www.youtube.com/embed/v3VCJC8rr-Y?autoplay=1' />
+        </Route>
+        <Route path='/windsurfing'>
+          <VideoPage videoID='https://www.youtube.com/embed/hEcO-Gj87gM?autoplay=1' />
+        </Route>
+        <Route path='/rice'>
+          <VideoPage videoID='https://www.youtube.com/embed/BbTnfwni83M?autoplay=1' />
         </Route>
         <Route path='/'>
           <Home />
