@@ -44,6 +44,7 @@ const Timelock = ({ unlockTime, position, header, children }) => {
       y='11%'
       dominant-baseline='middle'
       text-anchor='middle'
+      fontFamily='Courier'
     >
       {header}
     </text>
@@ -59,7 +60,7 @@ const Timelock = ({ unlockTime, position, header, children }) => {
     >
       {isLocked && lockedText}
 
-      <g opacity={isLocked ? '0.3' : '1'} fill='green'>
+      <g opacity={isLocked ? '0.3' : '1'}>
         {children}
         {!isLocked && unlockedText}
       </g>
